@@ -1,15 +1,21 @@
-print("Hello World!")
-print("Hi")
+
 
 
 def convert_decimal_to_digital(decimal):
-  value = 128
+
   digital = ""
-  while decimal !=0 :
-    if decimal >= value :
-      digital += "1"
+
+  power = 7
+
+  while power> -1:
+    if decimal >= 2**power :
+      digital = digital + "1"
+      decimal -= 2**power
     else :
-      digital +="0"
-    value /=2
+      digital = digital + "0"
+    
+    power -=1
 
   return digital
+
+  
