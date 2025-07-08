@@ -7,4 +7,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello, World!'
+    decimal = request.args.get('decimal')
+    digital = convert_decimal_to_digital(decimal)
+    return digital
