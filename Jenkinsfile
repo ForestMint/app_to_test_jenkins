@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo/my-python-app.git'
+                git 'https://github.com/ForestMint/app_to_test_jenkins.git'
             }
         }
 
